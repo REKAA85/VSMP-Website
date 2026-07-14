@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>vsmp-website</title>
+    <script>
+      // GitHub Pages SPA fallback: encode the current path into a query string
+      // on /404.html, then redirect to the real app so react-router can pick it up.
+      var basePath = '/VSMP-Website';
+      var path = location.pathname.slice(basePath.length) + location.search + location.hash;
+      location.replace(basePath + '/?redirect=' + encodeURIComponent(path));
+    </script>
+  </head>
+  <body></body>
+</html>
