@@ -22,11 +22,9 @@ function sectionBlend(el: HTMLElement) {
 function Home() {
   const heroRef = useRef<HTMLElement>(null)
   const aboutRef = useRef<HTMLElement>(null)
-  const moreRef = useRef<HTMLElement>(null)
   const [heroBlend, setHeroBlend] = useState(0)
   const [aboutBlend, setAboutBlend] = useState(0)
   const [aboutVisible, setAboutVisible] = useState(false)
-  const [moreVisible, setMoreVisible] = useState(false)
   const [showIntro] = useState(() => !sessionStorage.getItem(INTRO_KEY))
 
   useEffect(() => {
@@ -55,21 +53,17 @@ function Home() {
 
   useEffect(() => {
     const about = aboutRef.current
-    const more = moreRef.current
-    if (!about || !more) return
+    if (!about) return
 
     const observer = new IntersectionObserver(
       (entries) => {
         for (const entry of entries) {
-          if (!entry.isIntersecting) continue
-          if (entry.target === about) setAboutVisible(true)
-          if (entry.target === more) setMoreVisible(true)
+          if (entry.target === about && entry.isIntersecting) setAboutVisible(true)
         }
       },
       { threshold: 0.3 },
     )
     observer.observe(about)
-    observer.observe(more)
     return () => observer.disconnect()
   }, [])
 
