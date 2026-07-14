@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import type { CSSProperties } from 'react'
 import { Link } from 'react-router-dom'
+import { asset } from '../../lib/asset'
 import './Home.scss'
 
 const NAV_LINKS = [
@@ -95,7 +96,7 @@ function Home() {
 
         <div className="hero__content">
           <img
-            src="/assets/vsmp-logo.png"
+            src={asset('/assets/vsmp-logo.png')}
             alt="VSMP logo"
             className="hero__logo"
           />
@@ -116,7 +117,7 @@ function Home() {
         <a href="#about" className="hero__scroll-cue">
           <span className="hero__scroll-badge">
             <img
-              src="/assets/arrow-down.svg"
+              src={asset('/assets/arrow-down.svg')}
               alt=""
               className="hero__scroll-arrow"
             />
@@ -143,7 +144,7 @@ function Home() {
           </div>
 
           <img
-            src="/assets/vsmp-logo.png"
+            src={asset('/assets/vsmp-logo.png')}
             alt="VSMP logo"
             className="about__stamp"
           />
@@ -158,7 +159,7 @@ function Home() {
         </nav>
       </section>
 
-      <section
+      {/* <section
         className={`more${moreVisible ? ' more--visible' : ''}`}
         id="more"
         ref={moreRef}
@@ -167,7 +168,7 @@ function Home() {
         <div className="more__texture" aria-hidden="true" />
         <div className="more__content">
           <img
-            src="/assets/vsmp-logo.png"
+            src={asset('/assets/vsmp-logo.png')}
             alt="VSMP logo"
             className="more__stamp"
           />
@@ -175,15 +176,14 @@ function Home() {
           <div className="more__panel">
             <h2>Ready to join?</h2>
             <p>
-              Whitelist applications are open. Hop in the Discord, say hi, and
-              we'll get you set up on the server.
+              Insert funny catchphrase or cool. More info here. Or completely change the section to your liking!
             </p>
             <Link to="/join" className="more__cta">
               Join Us &rarr;
             </Link>
           </div>
         </div>
-      </section>
+      </section> */}
     </div>
   )
 }

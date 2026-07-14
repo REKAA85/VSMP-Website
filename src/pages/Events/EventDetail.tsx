@@ -3,6 +3,7 @@ import { useMemo } from 'react'
 import { Navigate, useParams } from 'react-router-dom'
 import BackLink from '../../components/BackLink/BackLink'
 import { formatDateRange, getEventBySlug } from '../../data/events'
+import { asset } from '../../lib/asset'
 import './EventDetail.scss'
 
 function EventDetail() {
@@ -18,7 +19,7 @@ function EventDetail() {
       <BackLink to="/events">All events</BackLink>
 
       <img
-        src={`/assets/${event.image}`}
+        src={asset(`/assets/${event.image}`)}
         alt={event.title}
         className="event-detail__photo"
       />

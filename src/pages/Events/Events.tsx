@@ -2,6 +2,7 @@ import { useMemo } from 'react'
 import { Link } from 'react-router-dom'
 import BackLink from '../../components/BackLink/BackLink'
 import { formatDateRange, loadEvents } from '../../data/events'
+import { asset } from '../../lib/asset'
 import './Events.scss'
 
 function Events() {
@@ -20,7 +21,7 @@ function Events() {
             className="events__card"
           >
             <img
-              src={`/assets/${event.image}`}
+              src={asset(`/assets/${event.image}`)}
               alt={event.title}
               className="events__photo"
             />

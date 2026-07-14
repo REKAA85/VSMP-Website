@@ -1,5 +1,6 @@
 import BackLink from '../../components/BackLink/BackLink'
 import staffData from '../../data/staff.json'
+import { asset } from '../../lib/asset'
 import './Staff.scss'
 
 interface StaffMember {
@@ -35,7 +36,7 @@ function Staff() {
               {members.map((member) => (
                 <div key={member.name} className="staff__card">
                   <img
-                    src={`/assets/staff/${member.image}`}
+                    src={asset(`/assets/staff/${member.image}`)}
                     alt={member.name}
                     className="staff__photo"
                   />
