@@ -1,0 +1,116 @@
+.event-detail {
+  min-height: 100svh;
+  padding: clamp(48px, 8vh, 96px) clamp(24px, 6vw, 80px);
+  background: #fffdf3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .back-link {
+    align-self: flex-start;
+    max-width: 720px;
+    width: 100%;
+    margin: 0 auto 20px;
+
+    @media (min-width: 800px) {
+      margin-left: calc(50% - 360px);
+    }
+  }
+
+  &__photo {
+    width: 100%;
+    max-width: 720px;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    border: 3px solid #000;
+    border-radius: 16px;
+    box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.9);
+    margin-bottom: 28px;
+  }
+
+  &__panel {
+    width: 100%;
+    max-width: 720px;
+    background: #fff;
+    border: 3px solid #000;
+    border-radius: 16px;
+    box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.9);
+    padding: clamp(24px, 4vw, 40px);
+
+    h1 {
+      font-family: var(--font-body);
+      font-weight: 800;
+      font-size: clamp(26px, 3.4vw, 36px);
+      margin-bottom: 6px;
+    }
+  }
+
+  &__date {
+    font-family: var(--font-nav);
+    font-size: 15px;
+    color: #d6357e;
+    margin-bottom: 24px;
+  }
+
+  &__body {
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--color-text);
+
+    p {
+      margin: 0 0 1em;
+    }
+
+    h2,
+    h3 {
+      margin: 1.2em 0 0.5em;
+    }
+
+    ul,
+    ol {
+      margin: 0 0 1em;
+      padding-left: 1.4em;
+    }
+  }
+
+  &__participants {
+    margin-top: 28px;
+    padding-top: 24px;
+    border-top: 1px solid var(--color-border);
+
+    h2 {
+      font-family: var(--font-nav);
+      font-size: 18px;
+      margin-bottom: 12px;
+    }
+
+    ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 0;
+      padding: 0;
+    }
+
+    li {
+      font-family: var(--font-nav);
+      font-size: 14px;
+      background: #000;
+      color: #fff;
+      border-radius: 999px;
+      padding: 6px 16px;
+    }
+  }
+
+  &__extra {
+    font-family: var(--font-body);
+    font-size: 14px;
+    font-style: italic;
+    color: var(--color-text-muted);
+    margin-top: 24px;
+    padding-top: 20px;
+    border-top: 1px solid var(--color-border);
+  }
+}

@@ -1,0 +1,22 @@
+.coming-soon {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 12px;
+  background: linear-gradient(90deg, #fc51bb 0%, #ffe761 67.788%);
+
+  h1 {
+    font-family: var(--font-display);
+    font-size: clamp(32px, 6vw, 64px);
+    color: #000;
+  }
+
+  p {
+    color: #000;
+    opacity: 0.7;
+  }
+
+}

@@ -1,0 +1,104 @@
+.staff {
+  min-height: 100svh;
+  padding: clamp(48px, 8vh, 96px) clamp(24px, 6vw, 80px);
+  background: #fffdf3;
+
+  &__heading {
+    font-family: var(--font-display);
+    font-size: clamp(48px, 8vw, 96px);
+    text-align: center;
+    color: #000;
+    margin-bottom: clamp(32px, 6vh, 64px);
+  }
+
+  &__section {
+    margin-bottom: clamp(48px, 8vh, 80px);
+
+    h2 {
+      font-family: var(--font-nav);
+      font-size: clamp(22px, 2.4vw, 32px);
+      color: #000;
+      display: inline-block;
+      border-bottom: 3px solid #000;
+      padding-bottom: 6px;
+      margin-bottom: 24px;
+    }
+  }
+
+  &__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 28px;
+  }
+
+  &__card {
+    background: #fff;
+    border: 3px solid #000;
+    border-radius: 16px;
+    box-shadow: 5px 5px 0 rgba(0, 0, 0, 0.9);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.2s ease;
+
+    &:nth-child(odd) {
+      transform: rotate(-1deg);
+    }
+
+    &:nth-child(even) {
+      transform: rotate(1deg);
+    }
+
+    &:hover {
+      transform: rotate(0deg) translateY(-4px);
+    }
+
+    h3 {
+      font-family: var(--font-body);
+      font-weight: 800;
+      font-size: 20px;
+      margin-bottom: 4px;
+    }
+  }
+
+  &__photo {
+    width: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border: 3px solid #000;
+    border-radius: 12px;
+    margin-bottom: 12px;
+  }
+
+  &__title {
+    font-family: var(--font-nav);
+    font-size: 14px;
+    color: #d6357e;
+    margin-bottom: 10px;
+  }
+
+  &__info {
+    font-family: var(--font-body);
+    font-size: 14px;
+    color: var(--color-text-muted);
+    line-height: 1.5;
+    margin: 0;
+  }
+
+  &__bg {
+    position: fixed;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  &__bg-color {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(0deg, #fbd9ff 0%, #f6a6ff 100%);
+  }
+
+  &__content {
+    position: relative;
+    z-index: 1;
+  }
+}

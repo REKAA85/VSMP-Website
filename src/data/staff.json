@@ -1,0 +1,24 @@
+[
+  {
+    "section": "Founders",
+    "members": [
+      {
+        "name": "Name Here",
+        "title": "Founder",
+        "info": "Short bio goes here — a couple sentences about this person's role on V-SMP.",
+        "image": "vsmp-logo.png"
+      }
+    ]
+  },
+  {
+    "section": "Moderators",
+    "members": [
+      {
+        "name": "Name Here",
+        "title": "Moderator",
+        "info": "Short bio goes here — a couple sentences about this person's role on V-SMP.",
+        "image": "vsmp-logo.png"
+      }
+    ]
+  }
+]
